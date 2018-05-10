@@ -10,13 +10,18 @@
 </head>
 <body id="stest">
 
-    <div  class="alert alert-success" ng-init="state = ['FL', 'CA', 'CO', 'NY']">
-     <ul>
-         <li ng-repeat="state in states">
-             {{ state }}
-         </li>
-     </ul>
+    
+
+    <div  class="alert alert-success" ng-init="greeting = {greeter: 'Delroy', message:'Delroy is an Awesome Developer!!'}">
+      <p>
+        <label>Name:</label> <input type="text" ng-model="greeting.greeter" size="35"/><br>
+        <label>Greeting:</label> <input type="text" ng-model="greeting.message" size="35"/>
+    </p>
+  
+    {{greeting.greeter}} said, Everybody wanna shout "<strong>{{ greeting.message }}</strong>"!
     </div>
+
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
 </body>
