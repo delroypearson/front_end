@@ -1,0 +1,28 @@
+<html ng-app>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="mycss.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body id="stest">
+
+    
+
+    <div  class="alert alert-success" ng-init="greeting = {greeter: 'Delroy', message:'Delroy is an Awesome Developer!!'}">
+      <p>
+        <label>Name:</label> <input type="text" ng-model="greeting.greeter" size="35"/><br>
+        <label>Greeting:</label> <input type="text" ng-model="greeting.message" size="35"/>
+    </p>
+  
+    {{greeting.greeter}} said, Everybody wanna shout "<strong>{{ greeting.message }}</strong>"!
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
+</body>
+</html>
