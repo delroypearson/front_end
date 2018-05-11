@@ -10,13 +10,23 @@
 </head>
 <body id="stest">
 
-    <div  class="alert alert-success" ng-init="state = ['FL', 'CA', 'CO', 'NY']">
-     <ul>
-         <li ng-repeat="state in states">
-             {{ state }}
-         </li>
-     </ul>
+    <div ng-init="girls = [ {name:'Sue D.' , age: 41}, {name:'Jen H.' , age: 31}, {name:'Kim U.' , age: 45}, {name:'Pat B.' , age: 43}]">
+    <p> <input type="text" ng-model="findme" placeholder="Enter Text"></p>
+        <p>There are about {{girls.length}} girls I would like to have dinner with.</p>
+
+
+       <div id="main1" class="card" ng-repeat="girl in girls | filter:{name:findme}| orderBy:'age'">
+
+         <div class="card-header"> {{girl.name}} <span>{{girl.age}}</span></div>
+          <p class="card-body" id="innercard" ">ssssssssssssssssssssssssssssssssssssssss</p>  
+        </div>
+
+
+        </div>
     </div>
+
+
+    
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
 </body>

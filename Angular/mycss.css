@@ -1,3 +1,29 @@
 #stest{
     padding: 50px;
 }
+
+.even {
+    background-color: cornflowerblue;
+}
+.odd {
+    background-color: rgb(100, 237, 157);
+}
+span {
+    float: right;
+}
+#main1 {
+    float: left;
+    width: auto;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    min-height: 10px;
+  
+}
+#innercard{
+    padding-bottom: 80px;
+}
+input, [type=text] {
+ border-radius: 2px;
+ border: 1px solid #bbb;
+
+ }
