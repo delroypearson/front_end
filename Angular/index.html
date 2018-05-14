@@ -2,32 +2,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="mycss.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
 <body id="stest">
+    
 
-    <div ng-init="girls = [ {name:'Sue D.' , age: 41}, {name:'Jen H.' , age: 31}, {name:'Kim U.' , age: 45}, {name:'Pat B.' , age: 43}]">
-    <p> <input type="text" ng-model="findme" placeholder="Enter Text"></p>
-        <p>There are about {{girls.length}} girls I would like to have dinner with.</p>
+    <div ng-controller="girlController">
+    <p><input type="text" ng-model="findme" placeholder="Enter Text"></p>
+    <p>There are about {{girls.length}} girls I would like to have dinner with.</p>
 
 
        <div id="main1" class="card" ng-repeat="girl in girls | filter:{name:findme}| orderBy:'age'">
 
          <div class="card-header"> {{girl.name}} <span>{{girl.age}}</span></div>
-          <p class="card-body" id="innercard" ">ssssssssssssssssssssssssssssssssssssssss</p>  
+          <p class="card-body" id="innercard">ssssssssssssssssssssssssssssssssssssssss</p>  
         </div>
 
 
-        </div>
     </div>
-
-
     
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
+
+ 
+<script type="text/javascript">
+function girlController($scope) {
+   $scope.girls = [ { name: 'Sue D.', age: 41 }, { name: 'Jen H.', age: 31 }, { name: 'Kim U.', age: 45 }, { name: 'Pat B.', age: 43 }];
+}
+</script>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
+
 </body>
 </html>
